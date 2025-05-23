@@ -9,7 +9,7 @@ interface LogoProps {
 export function Logo({ className }: LogoProps) {
   return (
     <div className={cn("flex items-center gap-2 text-primary", className)}>
-      <Image src={"/image.png"} alt={"Logo"} className="w-[149px] h-[36px]"/>
+      <Image src={"/image.png"} alt={"Logo"} width={149} height={36}/>
     </div>
   )
 }
