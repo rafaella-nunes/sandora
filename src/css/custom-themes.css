@@ -1,0 +1,18 @@
+
+@theme {
+  --color-roxo-sandora: var(--roxo-sandora);
+  --color-avisos: var(--avisos);
+  --color-gradient-end: var(--gradient-end)
+
+}
+
+:root {
+  --roxo-sandora: #803EFF; 
+  --avisos: #94A3B8;
+  --gradient-end: #EDB61E;
+}
+
+
+.dark {
+  --roxo-sandora: #A07AFF; 
+}
