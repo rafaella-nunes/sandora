@@ -25,12 +25,10 @@ export function AuthLayout({ children, title, subtitle, formTitle }: AuthLayoutP
         <div className="flex h-[50vh] w-full flex-col items-center bg-white px-6 pt-10">
           {/* Logo */}
           <div className="flex w-full justify-center">
-            {/* aria-label já está presente, o que é ótimo! */}
             <Link href="/" aria-label="Ir para página inicial">
               <Logo/>
             </Link>
           </div>
-          {/* Adicionado um título para o layout mobile para melhor contexto, invisível visualmente mas lido por leitores de tela */}
           <h1 className="sr-only"> 
             {isRegister ? "Cadastro de Conta" : "Página de Login"}
           </h1>
@@ -66,13 +64,11 @@ export function AuthLayout({ children, title, subtitle, formTitle }: AuthLayoutP
         {/* Centered form card */}
         <div
           className="absolute left-1/2 top-1/2 w-full max-w-[90%] -translate-x-1/2 -translate-y-1/2 px-4"
-          // Adicionado role="region" e aria-label para dar contexto ao leitor de tela sobre a área do formulário
           role="region" 
           aria-label={`${formTitle} do Usuário`} 
         >
           <div className="rounded-2xl bg-gradient-to-b from-roxo-sandora to-gradient-end p-[1px] shadow-lg">
             <div className="rounded-xl bg-white p-6">
-              {/* O h2 já é bom, mas garantindo que seja o título principal do formulário */}
               <h2 className="mb-6 text-center text-2xl font-semibold">{formTitle}</h2>
               {children}
             </div>
@@ -91,11 +87,9 @@ export function AuthLayout({ children, title, subtitle, formTitle }: AuthLayoutP
             </Link>
           </div>
 
-          {/* Title and subtitle - com margem automática */}
           <div className="w-full space-y-4 my-auto">
             {isRegister ? (
               <>
-                {/* O h1 é crucial para acessibilidade, é o título principal da página */}
                 <h1 className="text-5xl font-bold leading-snug text-[#353434]">
                   {title.split(" ").slice(0, -1).join(" ")}
                   <br />
@@ -119,7 +113,6 @@ export function AuthLayout({ children, title, subtitle, formTitle }: AuthLayoutP
         {/* Right side - purple */}
         <div
           className="flex w-1/2 flex-col items-center justify-center bg-roxo-sandora p-8"
-          // Adicionado role="region" e aria-label para dar contexto ao leitor de tela sobre a área do formulário
           role="region" 
           aria-label={`${formTitle} do Usuário`} 
         >
@@ -127,7 +120,6 @@ export function AuthLayout({ children, title, subtitle, formTitle }: AuthLayoutP
           <div className="w-full max-w-md">
             <div className="rounded-2xl bg-gradient-to-b from-roxo-sandora to-gradient-end p-[1px] shadow-md">
               <div className="rounded-xl bg-white p-8">
-                {/* O h2 já é bom, mas garantindo que seja o título principal do formulário dentro desta região */}
                 <h2 className="mb-6 text-2xl font-semibold">{formTitle}</h2>
                 {children}
               </div>
