@@ -24,6 +24,7 @@
     "react-hook-form": "^7.56.4",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.3.0",
+    "use-mask-input": "^3.4.2",
     "zod": "^3.25.7"
   },
   "devDependencies": {
